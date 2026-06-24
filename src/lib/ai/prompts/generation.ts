@@ -1,0 +1,1 @@
+export const generationPrompt = 'Generation prompt template';
