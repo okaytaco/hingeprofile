@@ -1,5 +1,8 @@
 import dbConnect from "./connect";
 import { PromptLibraryModel } from "./models/PromptLibrary";
+import dotenv from "dotenv";
+
+dotenv.config();
  
 /**
  * Full merged Hinge-style prompt library.
@@ -100,15 +103,6 @@ const prompts = [
     tags: ["funny", "lighthearted"],
     priority: 8,
     tone: "sarcastic",
-  },
- 
-  {
-    prompt: "Two truths and a lie...",
-    category: "humor",
-    requiredTraits: ["humor", "communication"],
-    tags: ["funny", "game"],
-    priority: 9,
-    tone: "chaotic",
   },
  
   {
@@ -735,16 +729,6 @@ const prompts = [
     tags: ["dating", "compatibility"],
     priority: 10,
     tone: "emotional",
-  },
- 
-  {
-    prompt: "My love language is...",
-    category: "relationship",
-    requiredTraits: ["relationships"],
-    tags: ["love-language", "dating"],
-    priority: 9,
-    tone: "thoughtful",
-    active: false, // ye bhi duplicate hai
   },
  
   {
@@ -1522,6 +1506,14 @@ async function seedPrompts() {
   try {
     await dbConnect();
     console.log("Connected to the database.");
+    const seen = new Set();
+
+for (const p of prompts) {
+    if (seen.has(p.prompt)) {
+        console.log("Duplicate:", p.prompt);
+    }
+    seen.add(p.prompt);
+}
     await PromptLibraryModel.deleteMany({});
     await PromptLibraryModel.insertMany(prompts);
     console.log("Prompts seeded successfully.");
