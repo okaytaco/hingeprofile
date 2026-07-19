@@ -26,11 +26,11 @@ export function Footer() {
       <div className="mx-auto max-w-7xl">
         {/* Giant Typography Header */}
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-baseline">
-          <div className="font-display text-5xl font-black uppercase tracking-tighter text-ink sm:text-7xl lg:text-8xl">
+          <div className="font-display text-3xl font-black uppercase tracking-tighter text-ink sm:text-5xl lg:text-7xl xl:text-8xl">
             ZERO FORMS.
           </div>
-          <div className="font-display text-5xl font-black uppercase tracking-tighter text-ink sm:text-right sm:text-7xl lg:text-8xl">
-            <span className="rounded-2xl border-4 border-ink bg-[#C6FF4D] px-4 py-1 text-ink shadow-[6px_6px_0px_#0c0b09]">
+          <div className="font-display text-3xl font-black uppercase tracking-tighter text-ink sm:text-right sm:text-5xl lg:text-7xl xl:text-8xl">
+            <span className="rounded-xl sm:rounded-2xl border-3 sm:border-4 border-ink bg-[#C6FF4D] px-3 py-1 sm:px-4 text-ink shadow-[4px_4px_0px_#0c0b09] sm:shadow-[6px_6px_0px_#0c0b09]">
               REAL PROFILES.
             </span>
           </div>
@@ -46,17 +46,21 @@ export function Footer() {
             <span className="mb-2 font-display text-xs font-bold uppercase tracking-widest text-ink/40">
               S:
             </span>
-            <a href="#" className="transition-all duration-200 hover:translate-x-1 hover:text-ink">
+            <a
+              href="https://www.instagram.com/nigbalsgonewild?igsh=MjFtdjNuOXZzZjIx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all duration-200 hover:translate-x-1 hover:text-ink"
+            >
               Instagram
             </a>
-            <a href="#" className="transition-all duration-200 hover:translate-x-1 hover:text-ink">
-              X (Twitter)
-            </a>
-            <a href="#" className="transition-all duration-200 hover:translate-x-1 hover:text-ink">
+            <a
+              href="https://github.com/Ayush042004"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all duration-200 hover:translate-x-1 hover:text-ink"
+            >
               GitHub
-            </a>
-            <a href="#" className="transition-all duration-200 hover:translate-x-1 hover:text-ink">
-              Discord
             </a>
           </div>
 
@@ -65,10 +69,10 @@ export function Footer() {
             <span className="mb-2 font-display text-xs font-bold uppercase tracking-widest text-ink/40">
               L:
             </span>
-            <span className="text-ink/60">Next.js 15 App Router</span>
-            <span className="text-ink/60">Vercel AI SDK Streaming</span>
-            <span className="text-ink/60">GPT-4o Personality Engine</span>
-            <span className="text-ink/60">MongoDB Atlas Cloud</span>
+            <span className="text-ink/60">Privacy First</span>
+            <span className="text-ink/60">Fast & Secure</span>
+            <span className="text-ink/60">AI That Understands</span>
+            <span className="text-ink/60">Continuously Improving</span>
           </div>
 
           {/* E: Contact */}
