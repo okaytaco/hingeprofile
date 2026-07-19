@@ -2,9 +2,11 @@ import { auth } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 import { Navbar } from '@/components/landing/Navbar';
 import { Hero } from '@/components/landing/Hero';
+import { ChonkyMarquee } from '@/components/landing/ChonkyMarquee';
 import { Manifesto } from '@/components/landing/Manifesto';
-import { Features } from '@/components/landing/Features';
-import { CTA } from '@/components/landing/CTA';
+import { Cases } from '@/components/landing/Cases';
+import { Services } from '@/components/landing/Services';
+import { FinalCta } from '@/components/landing/FinalCta';
 import { Footer } from '@/components/landing/Footer';
 
 export default async function Home() {
@@ -16,9 +18,11 @@ export default async function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <ChonkyMarquee />
         <Manifesto />
-        <Features />
-        <CTA />
+        <Cases />
+        <Services />
+        <FinalCta />
       </main>
       <Footer />
     </div>
