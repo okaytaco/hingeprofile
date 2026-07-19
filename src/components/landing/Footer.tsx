@@ -81,16 +81,28 @@ export function Footer() {
               E:
             </span>
             <a
-              href="mailto:hello@hingeprofile.ai"
-              className="underline decoration-ink/30 underline-offset-4 transition-all duration-200 hover:text-ink hover:decoration-ink"
+              href="mailto:aayushdutta4u@gmail.com"
+              className="underline decoration-ink/30 underline-offset-4 transition-all duration-200 hover:text-ink hover:decoration-ink break-all text-[11px] sm:text-sm"
             >
-              hello@hingeprofile.ai
+              aayushdutta4u@gmail.com
             </a>
             <a
-              href="mailto:press@hingeprofile.ai"
-              className="underline decoration-ink/30 underline-offset-4 transition-all duration-200 hover:text-ink hover:decoration-ink"
+              href="mailto:tridisam651@gmail.com"
+              className="underline decoration-ink/30 underline-offset-4 transition-all duration-200 hover:text-ink hover:decoration-ink break-all text-[11px] sm:text-sm"
             >
-              press@hingeprofile.ai
+              tridisam651@gmail.com
+            </a>
+            <a
+              href="mailto:singhaniketk707@gmail.com"
+              className="underline decoration-ink/30 underline-offset-4 transition-all duration-200 hover:text-ink hover:decoration-ink break-all text-[11px] sm:text-sm"
+            >
+              singhaniketk707@gmail.com
+            </a>
+            <a
+              href="mailto:kumarayush042004@gmail.com"
+              className="underline decoration-ink/30 underline-offset-4 transition-all duration-200 hover:text-ink hover:decoration-ink break-all text-[11px] sm:text-sm"
+            >
+              kumarayush042004@gmail.com
             </a>
           </div>
 
