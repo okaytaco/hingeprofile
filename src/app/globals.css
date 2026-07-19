@@ -544,6 +544,32 @@ body {
   filter: grayscale(0%);
 }
 
+/* ─── Custom Chat Scrollbar ────────────────────────────────────────────── */
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ink) var(--paper-dim);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--paper-dim);
+  border-left: 2px solid var(--ink);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--ink);
+  border: 2px solid var(--paper-dim);
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #C6FF4D;
+}
+
 /* Custom scrollbars */
 ::-webkit-scrollbar {
   width: 10px;

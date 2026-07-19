@@ -143,7 +143,7 @@ export default function InterviewPage() {
   return (
     <div className="flex h-[calc(100dvh-4rem)] sm:h-[calc(100dvh-5rem)] overflow-hidden bg-paper bg-dot-pattern">
       {/* ── Desktop Sidebar: Progress & Trait Breakdown ── */}
-      <aside className="hidden lg:flex w-88 flex-col gap-6 p-6 border-r-4 border-ink bg-surface overflow-y-auto custom-scrollbar shrink-0">
+      <aside data-lenis-prevent="true" className="hidden lg:flex w-88 flex-col gap-6 p-6 border-r-4 border-ink bg-surface overflow-y-auto custom-scrollbar shrink-0">
         <div className="flex items-center gap-2 pb-3 border-b-3 border-ink/20">
           <span className="rounded-lg border-2 border-ink bg-[#C6FF4D] px-2 py-0.5 font-display text-xs font-black uppercase">
             Live Coach
