@@ -21,6 +21,16 @@ export const useProfileStore = create<ProfileStore>((set) => ({
   generateProfile: async () => {
     set({ loading: true, error: null });
     try {
+      // First, try to fetch the latest existing active profile.
+      // This prevents re-running the AI pipeline on page refreshes.
+      const latestRes = await fetch('/api/profile/latest');
+      if (latestRes.ok) {
+        const latestData = await latestRes.json();
+        set({ generatedProfile: latestData.profile, loading: false });
+        return;
+      }
+
+      // No existing profile found (404) — generate the initial one.
       const res = await fetch('/api/profile/generate', { method: 'POST' });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));

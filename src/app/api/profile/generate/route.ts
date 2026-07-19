@@ -47,6 +47,23 @@ export async function POST(req: Request) {
       );
     }
 
+    // ── Guard: return existing profile instead of re-generating ──
+    // Each interview session should only auto-generate one initial profile.
+    // Refreshing the page must return the existing profile, not create a new one.
+    // Only the explicit "Regenerate" button (POST /api/profile/regenerate) creates new versions.
+    const existingProfile = await GeneratedProfileModel.findOne({
+      userId: user._id,
+      status: 'active',
+    }).sort({ createdAt: -1 });
+
+    if (existingProfile) {
+      return NextResponse.json({
+        success: true,
+        profile: existingProfile.toJSON(),
+        cached: true,
+      });
+    }
+
     // Get all active prompts
     const allPrompts = await PromptLibraryModel.find({ active: { $ne: false } }).lean();
     const promptOptions = allPrompts.map((p) => ({
